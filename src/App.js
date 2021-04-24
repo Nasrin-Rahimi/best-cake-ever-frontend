@@ -1,4 +1,5 @@
 import './App.css';
+import Login from './components/Login'
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         </a>
       </header>
       <h1>Welcome to Best Cake Ever</h1>
+      <Login />
     </div>
   );
 }
