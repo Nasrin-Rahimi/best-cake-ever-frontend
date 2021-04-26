@@ -14,7 +14,19 @@ export const login = credentials => {
             headers: {
                 "Content-Type": "application/json"
             },
-            body: JSON.stringify({name: "Nasrin", password: "mah"})
+            body: JSON.stringify(credentials)
         })
+        .then(resp => resp.json())
+        .then(customer => {
+            if (customer.error) {
+                alert(customer.error)
+            } else {
+                dispatch(setCurrentCustomer(customer))
+                //redux set customer object with the obove setCurrentCustomer method then flush throuth
+                //currentCustomer reducer and catch on SET_CURRENT_CUSTOMER case and return
+                //the customer object 
+            }
+        })
+        .catch(console.log)
     }
 }
