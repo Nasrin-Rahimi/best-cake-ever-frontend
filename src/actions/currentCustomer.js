@@ -6,6 +6,12 @@ export const setCurrentCustomer = customer => {
     }
 }
 
+export const clearCurrentCustomer = () => {
+    return {
+        type: "CLEAR_CURRENT_CUSTOMER"
+    }
+}
+
 //asynchronous action creators
 export const login = credentials => {
     return dispatch => {
@@ -32,7 +38,16 @@ export const login = credentials => {
     }
 }
 
-//asynchronous action creators
+export const logout = () => {
+    return (dispatch) => {
+        dispatch(clearCurrentCustomer())
+        return fetch('http://localhost:3001/api/v1/logout', {
+            credentials: "include",
+            method: "DELETE",
+        })
+    }
+}
+
 export const getCurrentCustomer = () => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/get_current_customer", {
