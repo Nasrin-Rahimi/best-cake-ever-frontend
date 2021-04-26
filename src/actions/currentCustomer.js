@@ -30,3 +30,24 @@ export const login = credentials => {
         .catch(console.log)
     }
 }
+
+//asynchronous action creators
+export const getCurrentCustomer = () => {
+    return dispatch => {
+        return fetch("http://localhost:3001/api/v1/get_current_customer", {
+            method: "GET",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        })
+        .then(resp => resp.json())
+        .then(customer => {
+            if (customer.error) {
+                alert(customer.error)
+            } else {
+                dispatch(setCurrentCustomer(customer))
+            }
+        })
+        .catch(console.log)
+    }
+}
