@@ -1,10 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import OrderCard from './OrderCard';
 
-const MyOrders = () => {
+const MyOrders = (props) => {
+    const orderCards = props.orders.map(order => <OrderCard order={order} />)
     return(
         <div>
-            MyOrders
+            {/* { orderCards.length > 0 ? orderCards : null } */}
+            { orderCards }
         </div>
     )
 }
