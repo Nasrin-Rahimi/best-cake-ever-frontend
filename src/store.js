@@ -2,12 +2,14 @@ import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import customerReducer from './reducers/customers';
 import currentCustomer from './reducers/currentCustomer';
 import loginForm from './reducers/loginForm';
+import myOrders from './reducers/myOrders';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
     customers: customerReducer,
     currentCustomer, //OR currentCustomer: currentCustomer
-    loginForm 
+    loginForm,
+    myOrders 
   })
   
 // const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
