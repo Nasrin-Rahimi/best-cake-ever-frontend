@@ -18,4 +18,4 @@ export default connect(null, { logout })(Logout)
 
 //1- action (creator)
 
-//2- another case statement in my currentCustomer reducer
+//2- another case statement in my currentCustomer reducer   

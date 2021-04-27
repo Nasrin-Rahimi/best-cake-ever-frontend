@@ -1,3 +1,5 @@
+import { resetLoginForm } from './loginForm'
+
 //synchronous action creators
 export const setCurrentCustomer = customer => {
     return {
@@ -32,6 +34,7 @@ export const login = credentials => {
                 //redux set customer object with the obove setCurrentCustomer method then flush throuth
                 //currentCustomer reducer and catch on SET_CURRENT_CUSTOMER case and return
                 //the customer object 
+                dispatch(resetLoginForm())
             }
         })
         .catch(console.log)
