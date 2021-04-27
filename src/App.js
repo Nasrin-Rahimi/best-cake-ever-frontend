@@ -3,7 +3,9 @@ import './App.css';
 import { connect } from 'react-redux';
 import { getCurrentCustomer } from './actions/currentCustomer';
 import NavBar from './components/NavBar';
-import MainContainer from './components/MainContainer';
+import { Route } from 'react-router-dom';
+import Login from './components/Login';
+import MyOrders from './components/MyOrders';
 
 class App extends React.Component {
 
@@ -22,8 +24,8 @@ class App extends React.Component {
         <h1>Best Cake Ever</h1>
 
         <NavBar />
-        <MainContainer />
-
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/my-orders" component={MyOrders} />
       </div>
     );
   }
