@@ -3,14 +3,21 @@ import Login from './Login';
 import Logout from './Logout';
 import { connect } from 'react-redux';
 import Signup from './Signup';
+import { NavLink } from 'react-router-dom';
 
 const NavBar = ({ currentCustomer }) => {
-    return (
-        <div className="NavBar">
-            { currentCustomer ? <strong>Welcome {currentCustomer.attributes.name} </strong> : '' }
-            { currentCustomer ? <Logout /> : <div><Login /> <Signup /></div> }
-        </div>
-    )
+  return (
+    <div className="NavBar">
+      { currentCustomer ? <strong>Welcome {currentCustomer.attributes.name} </strong> : '' }
+        { currentCustomer ?  
+          <NavLink  to="/logout" exact >Log Out</NavLink> : 
+            <div>
+              <NavLink  to="/login" exact >Log In</NavLink>
+              <NavLink  to="/signup" exact >Sign Up</NavLink>
+            </div> 
+        }
+    </div>
+  )
 }
 //destructing currentCustomer from state. We can do it because
 //the incoming argument is as object (state) comign from redux
