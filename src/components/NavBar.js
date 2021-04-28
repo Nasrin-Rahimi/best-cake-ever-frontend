@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
 const NavBar = ({ currentCustomer }) => {
   return (
     <div className="NavBar">
-      { currentCustomer ? <strong>Welcome {currentCustomer.attributes.name} </strong> : '' }
+      { currentCustomer ? <strong>Hello {currentCustomer.attributes.name} </strong> : '' }
         { currentCustomer ?  
           <NavLink  to="/logout" exact >Log Out</NavLink> : 
             <div>
