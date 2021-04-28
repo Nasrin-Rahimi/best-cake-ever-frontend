@@ -22,10 +22,10 @@ const Login = ({ loginFormData, updateLoginForm, login }) => {
     return (
         <form onSubmit={handleSubmit}>
             <input value={loginFormData.name} type="text" name="name"
-             placeholder="Name" onChange={handleInputChange} />
+             placeholder="Enter your name ..." onChange={handleInputChange} class="input-text" /><br />
             <input value={loginFormData.password} type="text" name="password"
-             placeholder="Password" onChange={handleInputChange} />
-            <input type="submit" value="Log In" />
+             placeholder="Enter your password ..." onChange={handleInputChange} class="input-text" /><br />
+            <input type="submit" value="Log In" class="submit" />
         </form>
     )
 

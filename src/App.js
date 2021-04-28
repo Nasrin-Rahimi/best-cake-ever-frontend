@@ -20,10 +20,9 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer" ></a>
+          <h1>Best Cake Ever</h1>
         </header>
-        <h1>Best Cake Ever</h1>
-
+        
         <NavBar />
         <Route exact path="/login" component={Login} />
         <Route exact path="/my-orders" component={MyOrders} />

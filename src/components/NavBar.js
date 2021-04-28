@@ -2,12 +2,13 @@ import React from 'react';
 import Login from './Login';
 import Logout from './Logout';
 import { connect } from 'react-redux';
+import Signup from './Signup';
 
 const NavBar = ({ currentCustomer }) => {
     return (
         <div className="NavBar">
             { currentCustomer ? <strong>Welcome {currentCustomer.attributes.name} </strong> : '' }
-            { currentCustomer ? <Logout /> : <Login /> }
+            { currentCustomer ? <Logout /> : <div><Login /> <Signup /></div> }
         </div>
     )
 }
