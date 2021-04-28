@@ -74,3 +74,5 @@ export const getCurrentCustomer = () => {
         .catch(console.log)
     }
 }
+
+export const signup = () => {}
