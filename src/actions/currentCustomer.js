@@ -1,4 +1,5 @@
 import { resetLoginForm } from './loginForm'
+import { resetSignupForm } from './signupForm'
 import { setMyOrders } from './myOrders'
 
 //synchronous action creators
@@ -75,4 +76,29 @@ export const getCurrentCustomer = () => {
     }
 }
 
-export const signup = () => {}
+export const signup = credentials => {
+    return dispatch => {
+        const customer = {
+            customer: credentials
+        }
+        return fetch("http://localhost:3001/api/v1/signup", {
+            credentials: "include",
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(customer)
+        })
+        .then(resp => resp.json())
+        .then(customer => {
+            if (customer.error) {
+                alert(customer.error)
+            } else {
+                dispatch(setCurrentCustomer(customer.data))
+                // dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
+                dispatch(resetSignupForm())
+            }
+        })
+        .catch(console.log)
+    }
+}
