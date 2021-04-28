@@ -22,7 +22,10 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1>Best Cake Ever</h1>
+          <a href="/">
+            <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25762110.jpg" alt="Best Cake Ever" class="header_img" />
+          </a>
+          {/* <h1>Best Cake Ever</h1> */}
         </header>
         
         <NavBar />

@@ -14,14 +14,12 @@
 }
 
 .App-header {
-  background-color: #7489b4;
-  min-height: 15vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+    justify-content: center;
+    background:rgba(165, 123, 89, 0.616);
+    opacity: .8;
+    height: 7rem;
+    padding: 1rem;
 }
 
 .App-link {
@@ -35,6 +33,11 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.header_img {
+  height: 7rem;
+  width: auto;
 }
 
 /* .NavBar {
