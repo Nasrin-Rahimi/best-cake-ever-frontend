@@ -5,8 +5,10 @@ import { getCurrentCustomer } from './actions/currentCustomer';
 import NavBar from './components/NavBar';
 import { Route } from 'react-router-dom';
 import Login from './components/Login';
+import Logout from './components/Logout';
 import Signup from "./components/Signup";
 import MyOrders from './components/MyOrders';
+import Home from './components/Home';
 
 class App extends React.Component {
 
@@ -24,9 +26,11 @@ class App extends React.Component {
         </header>
         
         <NavBar />
+        <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/my-orders" component={MyOrders} />
         <Route exact path="/signup" component={Signup} />
+        <Route exact path="/logout" component={Logout} />
       </div>
     );
   }
