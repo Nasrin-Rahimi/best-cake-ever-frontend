@@ -6,8 +6,7 @@ const MyOrders = (props) => {
     const orderCards = props.orders.map(order => <OrderCard order={order} key={order.id} />)
     return(
         <div>
-            {/* { orderCards.length > 0 ? orderCards : null } */}
-            { orderCards }
+            {orderCards.length > 0 ? orderCards : <h3>You don't have any order!</h3>}
         </div>
     )
 }
