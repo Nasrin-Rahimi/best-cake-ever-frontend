@@ -11,6 +11,7 @@ import MyOrders from './components/MyOrders';
 import Home from './components/Home';
 import Categories from './components/Categories';
 import Products from "./components/Products";
+import { getCategories } from "./actions/categories";
 
 class App extends React.Component {
 
@@ -18,6 +19,7 @@ class App extends React.Component {
   //if yes we grab it
   componentDidMount() {
     this.props.getCurrentCustomer()
+    this.props.getCategories()
   }
 
   render (){
@@ -43,4 +45,4 @@ class App extends React.Component {
   }
 }
 
-export default connect(null, { getCurrentCustomer })(App);
+export default connect(null, { getCurrentCustomer, getCategories })(App);
