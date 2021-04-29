@@ -95,6 +95,13 @@
   font-size: 0.8rem;
 }
 
+.categoryLink {
+  color:black;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+}
+
 .home h2 {
   color:rgb(110, 55, 16);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
@@ -102,8 +109,9 @@
 
 .image {
   justify-self: center;
-  height: 6.5rem;
+  height: 6rem;
   width: auto;
+  margin: 12px;
 }
 
 .homeImage {
