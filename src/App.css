@@ -16,7 +16,7 @@
 .App-header {
   display: flex;
     justify-content: center;
-    background:rgba(219, 191, 198, 0.918);
+    background:rgba(158, 83, 34, 0.657);
     opacity: .8;
     height: 5rem;
     padding: 1rem;
@@ -95,9 +95,20 @@
   font-size: 0.8rem;
 }
 
+.home h2 {
+  color:rgb(110, 55, 16);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+}
+
 .image {
   justify-self: center;
   height: 6rem;
+  width: auto;
+}
+
+.homeImage {
+  justify-self: center;
+  height: 20rem;
   width: auto;
 }
 
