@@ -10,7 +10,7 @@ const Categories = (props) => {
     const categoryCards = props.Categories.map(category => <CategoryCard category={category} key={category.id} />)
 
     return(
-        <div>
+        <div className="Categories">
             {categoryCards}
         </div>
     )

@@ -16,9 +16,9 @@
 .App-header {
   display: flex;
     justify-content: center;
-    background:rgba(165, 123, 89, 0.616);
+    background:rgba(219, 191, 198, 0.918);
     opacity: .8;
-    height: 7rem;
+    height: 5rem;
     padding: 1rem;
 }
 
@@ -36,7 +36,7 @@
 }
 
 .header_img {
-  height: 7rem;
+  height: 5rem;
   width: auto;
 }
 
@@ -72,6 +72,33 @@
   background-color: whitesmoke;
   border: #e04b52 solid 1px;
   color: #e04b52;
+}
+
+.Categories {
+  border: rgba(51, 26, 2, 0.945) solid 1px;
+  padding: 3rem;
+  margin: 2rem 1rem;
+  background-color:rgba(219, 191, 198, 0.918);
+  display: block;
+}
+
+.CategoryCard {
+  background-color:rgba(121, 53, 75, 0.287) ;
+  text-align: center;
+  border: grey solid 1px;
+  padding: 1rem;
+  width: 10rem;
+  height: 10rem;
+  display: inline-grid;
+  margin: 1rem 1rem;
+  box-shadow: 3px 4px #7e480b;
+  font-size: 0.8rem;
+}
+
+.image {
+  justify-self: center;
+  height: 6rem;
+  width: auto;
 }
 
 button {

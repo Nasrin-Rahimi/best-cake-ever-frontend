@@ -2,7 +2,10 @@ import React from 'react';
 
 const CategoryCard = ({ category }) => {
     return (
-        <p>Name: {category.attributes.name}</p>
+        <div className="CategoryCard">
+            <img src={category.attributes.image} className="image" />
+            <p>{category.attributes.name}</p>
+        </div>
     )
 }
 
