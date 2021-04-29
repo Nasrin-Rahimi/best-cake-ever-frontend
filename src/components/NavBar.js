@@ -11,14 +11,15 @@ const NavBar = ({ currentCustomer }) => {
       { currentCustomer ? <strong>Hello {currentCustomer.attributes.name} </strong> : '' }
         { currentCustomer ?  
           <div>
-            <NavLink  to="/logout" exact >Log Out</NavLink> | 
-            <NavLink to="/orders" exact > My Orders</NavLink>
+            <NavLink  to="/logout" exact > Log Out </NavLink> | 
+            <NavLink to="/orders" exact > My Orders </NavLink>
           </div> : 
           <div>
-            <NavLink  to="/login" exact >Log In</NavLink> |
-            <NavLink  to="/signup" exact > Sign Up</NavLink>
+            <NavLink  to="/login" exact > Log In </NavLink> |
+            <NavLink  to="/signup" exact > Sign Up </NavLink> | 
           </div> 
         }
+        <NavLink  to="/categories" exact > Categories </NavLink>  
     </div>
   )
 }
