@@ -12,7 +12,7 @@ const NavBar = ({ currentCustomer }) => {
         { currentCustomer ?  
           <div>
             <NavLink  to="/logout" exact > Log Out </NavLink> | 
-            <NavLink to="/orders" exact > My Orders </NavLink>
+            <NavLink to="/orders" exact > My Orders </NavLink> |
           </div> : 
           <div>
             <NavLink  to="/login" exact > Log In </NavLink> |
