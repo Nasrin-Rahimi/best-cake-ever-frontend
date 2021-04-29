@@ -77,7 +77,7 @@ export const getCurrentCustomer = () => {
     }
 }
 
-export const signup = credentials => {
+export const signup = (credentials, history) => {
     return dispatch => {
         const customer = {
             customer: credentials
@@ -98,6 +98,7 @@ export const signup = credentials => {
                 dispatch(setCurrentCustomer(customer.data))
                 // dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
                 dispatch(resetSignupForm())
+                history.push('/')
             }
         })
         .catch(console.log)
