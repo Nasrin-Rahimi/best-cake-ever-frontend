@@ -30,7 +30,7 @@ export const login = (credentials, history) => {
         .then(resp => resp.json())
         .then(customer => {
             if (customer.error) {
-                alert(customer.error)
+                // alert(customer.error)
             } else {
                 dispatch(setCurrentCustomer(customer.data))
                 //redux set customer object with the obove setCurrentCustomer method then flush throuth
@@ -67,7 +67,7 @@ export const getCurrentCustomer = () => {
         .then(resp => resp.json())
         .then(customer => {
             if (customer.error) {
-                alert(customer.error)
+                // alert(customer.error)
             } else {
                 dispatch(setCurrentCustomer(customer.data))
                 dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
