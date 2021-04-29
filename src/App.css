@@ -40,11 +40,11 @@
   width: auto;
 }
 
-/* .NavBar {
+.NavBar {
   display: flex;
   flex-direction: row;
-  color: navy;
-} */
+  color:maroon;
+}
 
 .input-text {
   border-radius: 5px;
@@ -57,7 +57,7 @@
 
 .submit {
   position: relative;
-  background-color: #e04b52;
+  background-color: #c0484e;
   border-radius: 5px;
   height: 2rem;
   width: max-content;
@@ -78,7 +78,7 @@
   border: rgba(51, 26, 2, 0.945) solid 1px;
   padding: 3rem;
   margin: 2rem 1rem;
-  background-color:rgba(219, 191, 198, 0.918);
+  background-color:rgba(173, 112, 72, 0.356);
   display: block;
 }
 
@@ -86,7 +86,7 @@
   background-color:rgba(121, 53, 75, 0.287) ;
   text-align: center;
   border: grey solid 1px;
-  padding: 1rem;
+  padding: 0.6rem 0.6rem;
   width: 10rem;
   height: 10rem;
   display: inline-grid;
@@ -102,7 +102,7 @@
 
 .image {
   justify-self: center;
-  height: 6rem;
+  height: 6.5rem;
   width: auto;
 }
 
