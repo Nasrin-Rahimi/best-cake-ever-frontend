@@ -7,10 +7,9 @@ export const setCategories = categories => {
 }
 
 //asynchronous action creators
-export default Categories
 export const getCategories = () => {
     return dispatch => {
-        return fetch("http://localhost:3001/api/v1/", {
+        return fetch("http://localhost:3001/api/v1/categories", {
             credentials: "include",
             method: "GET",
             headers: {
@@ -18,12 +17,13 @@ export const getCategories = () => {
             },
         })
         .then(resp => resp.json())
-        .then(customer => {
-            if (customer.error) {
-                alert(customer.error)
+        .then(category => {
+            if (category.error) {
+                alert(category.error)
             } else {
-                dispatch(setCurrentCustomer(customer.data))
-                dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
+                // console.log(category)
+                dispatch(setCategories(category.data))
+                // dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
             }
         })
         .catch(console.log)
