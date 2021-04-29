@@ -17,7 +17,7 @@ export const clearCurrentCustomer = () => {
 }
 
 //asynchronous action creators
-export const login = credentials => {
+export const login = (credentials, history) => {
     return dispatch => {
         return fetch("http://localhost:3001/api/v1/login", {
             credentials: "include",
@@ -38,6 +38,7 @@ export const login = credentials => {
                 //the customer object 
                 dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
                 dispatch(resetLoginForm())
+                history.push('/')
             }
         })
         .catch(console.log)
