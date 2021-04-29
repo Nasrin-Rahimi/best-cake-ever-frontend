@@ -1,3 +1,5 @@
+import { setProducts } from "./products";
+
 //synchronous action creators
 export const setCategories = categories => {
     return {
@@ -21,9 +23,8 @@ export const getCategories = () => {
             if (category.error) {
                 alert(category.error)
             } else {
-                // console.log(category)
                 dispatch(setCategories(category.data))
-                // dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
+                dispatch(setProducts(category.included))
             }
         })
         .catch(console.log)
