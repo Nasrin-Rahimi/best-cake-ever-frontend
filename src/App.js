@@ -31,7 +31,7 @@ class App extends React.Component {
         <NavBar />
         <Route exact path="/" component={Home} />
         <Route exact path="/login" component={Login} />
-        <Route exact path="/my-orders" component={MyOrders} />
+        <Route exact path="/orders" component={MyOrders} />
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/logout" component={Logout} />
       </div>
