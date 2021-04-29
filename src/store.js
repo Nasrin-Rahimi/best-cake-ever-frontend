@@ -5,6 +5,7 @@ import loginForm from './reducers/loginForm';
 import myOrders from './reducers/myOrders';
 import signupForm from './reducers/signupForm';
 import categories from './reducers/categories';
+import products from './reducers/products';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
@@ -13,7 +14,8 @@ const reducer = combineReducers({
     loginForm,
     myOrders,
     signupForm,
-    categories
+    categories,
+    products
   })
   
 // const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
