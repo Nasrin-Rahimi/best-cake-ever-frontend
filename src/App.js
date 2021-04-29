@@ -10,6 +10,7 @@ import Signup from "./components/Signup";
 import MyOrders from './components/MyOrders';
 import Home from './components/Home';
 import Categories from './components/Categories';
+import Products from "./components/Products";
 
 class App extends React.Component {
 
@@ -36,6 +37,7 @@ class App extends React.Component {
         <Route exact path="/signup" component={Signup} />
         <Route exact path="/logout" component={Logout} />
         <Route exact path="/categories" component={Categories} />
+        <Route exact path="/categories/:category_id/products" component={Products} />
       </div>
     );
   }
