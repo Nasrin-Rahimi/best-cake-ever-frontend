@@ -1,6 +1,7 @@
 import { resetLoginForm } from './loginForm'
 import { resetSignupForm } from './signupForm'
 import { setMyOrders, clearMyOrders } from './myOrders'
+import { setMyOrderDetails } from './myOrderDetails'
 
 //synchronous action creators
 export const setCurrentCustomer = customer => {
@@ -32,11 +33,13 @@ export const login = (credentials, history) => {
             if (customer.error) {
                 // alert(customer.error)
             } else {
+                console.log(customer)
                 dispatch(setCurrentCustomer(customer.data))
                 //redux set customer object with the obove setCurrentCustomer method then flush throuth
                 //currentCustomer reducer and catch on SET_CURRENT_CUSTOMER case and return
                 //the customer object 
                 dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
+                dispatch(setMyOrderDetails(customer.included.filter(data => data.type === "orderdetail")))
                 dispatch(resetLoginForm())
                 history.push('/')
             }
