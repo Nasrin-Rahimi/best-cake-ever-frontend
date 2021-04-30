@@ -175,6 +175,17 @@ button:hover {
   
 }
 
+.OrderDetailsLink{
+  color: rgb(107, 84, 47);
+  text-decoration: underline;
+  text-align: left;
+  cursor: pointer;
+}
+.OrderDetail{
+  color: rgb(58, 73, 102);
+  font-weight: 500;
+}
+
 
 
 
