@@ -1,26 +1,24 @@
 import React from 'react';
-import Login from './Login';
 import Logout from './Logout';
 import { connect } from 'react-redux';
-import Signup from './Signup';
 import { NavLink } from 'react-router-dom';
 
 const NavBar = ({ currentCustomer, loggedIn }) => {
   return (
     <div className="NavBar">
-      { loggedIn ? <strong>Hello {currentCustomer.attributes.name} </strong> : '' }
-        { loggedIn ?  
-          <div>
-            <NavLink  to="/logout" exact > Log Out </NavLink> | 
-            <NavLink to="/orders" exact > My Orders </NavLink> |
-          </div> : 
-          <div>
-            <NavLink  to="/login" exact > Log In </NavLink> |
-            <NavLink  to="/signup" exact > Sign Up </NavLink> | 
-          </div> 
-        }
-        <NavLink  to="/categories" exact > Categories </NavLink>  
-    </div>
+      { loggedIn ?  
+        <div>
+          <strong>Hello {currentCustomer.attributes.name} </strong>
+          <NavLink to="/orders" exact > My Orders </NavLink> |
+        </div> : 
+        <div>
+          <NavLink  to="/login" exact > Log In </NavLink> |
+          <NavLink  to="/signup" exact > Sign Up </NavLink> | 
+        </div> 
+      }
+      <NavLink  to="/categories" exact > Categories </NavLink> |
+      { loggedIn ?  <Logout /> : null }
+  </div>
   )
 }
 //destructing currentCustomer from state. We can do it because
