@@ -1,12 +1,12 @@
 
 import React,{useState} from 'react';
+import MyOrderDetails from './MyOrderDetails';
 
 const OrderCard = ({ order }) => {
-    console.log(order.relationships.orderdetails.data)
     const [orderDetails,setOrderDetails]=useState(false);
     const extraContent=<div>
       <p className="OrderDetail">
-        Order Detail
+        <MyOrderDetails orderId = {order.id} />
       </p>
   </div>
 

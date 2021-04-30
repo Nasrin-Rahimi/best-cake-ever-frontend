@@ -33,7 +33,6 @@ export const login = (credentials, history) => {
             if (customer.error) {
                 // alert(customer.error)
             } else {
-                console.log(customer)
                 dispatch(setCurrentCustomer(customer.data))
                 //redux set customer object with the obove setCurrentCustomer method then flush throuth
                 //currentCustomer reducer and catch on SET_CURRENT_CUSTOMER case and return
@@ -75,6 +74,7 @@ export const getCurrentCustomer = () => {
             } else {
                 dispatch(setCurrentCustomer(customer.data))
                 dispatch(setMyOrders(customer.included.filter(data => data.type === "order")))
+                dispatch(setMyOrderDetails(customer.included.filter(data => data.type === "orderdetail")))
             }
         })
         .catch(console.log)
