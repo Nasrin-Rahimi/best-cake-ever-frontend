@@ -171,6 +171,19 @@ button:hover {
   color: #e04b52;
 }
 
+.logout {
+  background: none!important;
+  border: none;
+  padding: 0!important;
+  font-family: arial, sans-serif;
+  font-size: 16px;
+  color:rebeccapurple;
+  text-decoration: underline;
+  cursor: pointer;
+  
+}
+
+
 
 
 
