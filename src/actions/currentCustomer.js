@@ -1,6 +1,6 @@
 import { resetLoginForm } from './loginForm'
 import { resetSignupForm } from './signupForm'
-import { setMyOrders } from './myOrders'
+import { setMyOrders, clearMyOrders } from './myOrders'
 
 //synchronous action creators
 export const setCurrentCustomer = customer => {
@@ -48,6 +48,7 @@ export const login = (credentials, history) => {
 export const logout = () => {
     return (dispatch) => {
         dispatch(clearCurrentCustomer())
+        dispatch(clearMyOrders())
         return fetch('http://localhost:3001/api/v1/logout', {
             credentials: "include",
             method: "DELETE",

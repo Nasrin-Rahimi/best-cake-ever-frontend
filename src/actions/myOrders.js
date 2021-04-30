@@ -4,3 +4,9 @@ export const setMyOrders = orders => {
         orders
     }
 }
+
+export const clearMyOrders = () => {
+    return {
+        type: "CLEAR_MY_ORDERS"        
+    }
+}
