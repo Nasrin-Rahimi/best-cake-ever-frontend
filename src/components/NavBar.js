@@ -5,11 +5,11 @@ import { connect } from 'react-redux';
 import Signup from './Signup';
 import { NavLink } from 'react-router-dom';
 
-const NavBar = ({ currentCustomer }) => {
+const NavBar = ({ currentCustomer, loggedIn }) => {
   return (
     <div className="NavBar">
-      { currentCustomer ? <strong>Hello {currentCustomer.attributes.name} </strong> : '' }
-        { currentCustomer ?  
+      { loggedIn ? <strong>Hello {currentCustomer.attributes.name} </strong> : '' }
+        { loggedIn ?  
           <div>
             <NavLink  to="/logout" exact > Log Out </NavLink> | 
             <NavLink to="/orders" exact > My Orders </NavLink> |
@@ -28,7 +28,8 @@ const NavBar = ({ currentCustomer }) => {
 //and we know it has a property called currentCustomer
 const mapStateToProps = ( {currentCustomer} ) => {
   return {
-    currentCustomer
+    currentCustomer,
+    loggedIn: !!currentCustomer
   }
 }
 
