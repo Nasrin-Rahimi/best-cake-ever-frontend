@@ -16,7 +16,7 @@ const NavBar = ({ currentCustomer, loggedIn }) => {
           <NavLink  to="/signup" exact > Sign Up </NavLink> | 
         </div> 
       }
-      <NavLink  to="/categories" exact > Categories </NavLink> |
+      <NavLink  to="/categories" exact > Categories </NavLink> 
       { loggedIn ?  <Logout /> : null }
   </div>
   )

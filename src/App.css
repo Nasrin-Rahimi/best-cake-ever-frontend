@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  text-align: center; 
 }
 
 .App-logo {
@@ -20,6 +20,14 @@
     opacity: .8;
     height: 5rem;
     padding: 1rem;
+}
+
+.AppContainer {
+  border: rgba(51, 26, 2, 0.945) solid 1px;
+  padding: 1rem;
+  margin: 0.5rem 0.0rem;
+  background-color:rgba(173, 112, 72, 0.356);
+  display: block;
 }
 
 .App-link {
@@ -78,14 +86,6 @@ a.active {
   color: #e04b52;
 }
 
-.Categories {
-  border: rgba(51, 26, 2, 0.945) solid 1px;
-  padding: 3rem;
-  margin: 2rem 1rem;
-  background-color:rgba(173, 112, 72, 0.356);
-  display: block;
-}
-
 .CategoryCard {
   background-color:rgba(121, 53, 75, 0.287) ;
   text-align: center;
@@ -104,14 +104,6 @@ a.active {
   text-decoration: none;
   text-align: center;
   display: inline-block;
-}
-
-.Products {
-  border: rgba(51, 26, 2, 0.945) solid 1px;
-  padding: 3rem;
-  margin: 2rem 1rem;
-  background-color:rgba(173, 112, 72, 0.356);
-  display: block;
 }
 
 .ProductCard {
@@ -182,7 +174,6 @@ button:hover {
   cursor: pointer;
   
 }
-
 
 
 

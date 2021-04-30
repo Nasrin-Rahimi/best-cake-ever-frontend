@@ -5,7 +5,6 @@ import { getCurrentCustomer } from './actions/currentCustomer';
 import NavBar from './components/NavBar';
 import { Route } from 'react-router-dom';
 import Login from './components/Login';
-import Logout from './components/Logout';
 import Signup from "./components/Signup";
 import MyOrders from './components/MyOrders';
 import Home from './components/Home';
@@ -31,15 +30,16 @@ class App extends React.Component {
           </a>
           {/* <h1>Best Cake Ever</h1> */}
         </header>
-        
         <NavBar />
-        <Route exact path="/" component={Home} />
-        <Route exact path="/login" component={Login} />
-        <Route exact path="/orders" component={MyOrders} />
-        <Route exact path="/signup" component={Signup} />
-        {/* <Route exact path="/logout" component={Logout} /> */}
-        <Route exact path="/categories" component={Categories} />
-        <Route exact path="/categories/:category_id/products" component={Products} />
+        <div className="AppContainer">
+          
+          <Route exact path="/" component={Home} />
+          <Route exact path="/login" component={Login} />
+          <Route exact path="/orders" component={MyOrders} />
+          <Route exact path="/signup" component={Signup} />
+          <Route exact path="/categories" component={Categories} />
+          <Route exact path="/categories/:category_id/products" component={Products} />
+        </div>
       </div>
     );
   }
