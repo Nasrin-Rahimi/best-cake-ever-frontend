@@ -26,7 +26,7 @@ class App extends React.Component {
       <div className="App">
         <header className="App-header">
           <a href="/">
-            <img src="https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25762110.jpg" alt="Best Cake Ever" className="header_img" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBPYyaiEyPJrR_p2kwiK3t6BkOZuctrkgGbQ&usqp=CAU" alt="Best Cake Ever" className="header_img" />
           </a>
           {/* <h1>Best Cake Ever</h1> */}
         </header>
