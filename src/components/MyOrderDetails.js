@@ -3,8 +3,7 @@ import { connect } from 'react-redux';
 import OrderDetailCard from './OrderDetailCard';
 
 const MyOrderDetails = (props) => {
-    console.log(props)
-
+    
     const orderDetails = props.orderdetails.filter(orderdetail => orderdetail.attributes.order_id == props.orderId)
     const orderDetailCards = orderDetails.map(orderdetail => <OrderDetailCard orderdetail={orderdetail} key={orderdetail.id} />)
     return(
