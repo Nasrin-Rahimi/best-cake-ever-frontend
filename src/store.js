@@ -1,5 +1,4 @@
 import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
-import customerReducer from './reducers/customers';
 import currentCustomer from './reducers/currentCustomer';
 import loginForm from './reducers/loginForm';
 import myOrders from './reducers/myOrders';
@@ -10,7 +9,6 @@ import products from './reducers/products';
 import thunk from 'redux-thunk';
 
 const reducer = combineReducers({
-    customers: customerReducer,
     currentCustomer, //OR currentCustomer: currentCustomer
     loginForm,
     myOrders,
