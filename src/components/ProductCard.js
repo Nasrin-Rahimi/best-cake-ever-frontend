@@ -9,7 +9,7 @@ const ProductCard = ({ product }) => {
                 {product.attributes.name}<br/>
                 ${product.attributes.unit_price.toFixed(2)}<br/>
                 {product.attributes.weight}<br/>
-                <button>Description</button>
+                {/* <button>Description</button> */}
                 <button>Add to Order</button>
             {/* </Link> */}
         </div>
