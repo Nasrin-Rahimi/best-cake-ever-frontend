@@ -15,9 +15,13 @@ const OrderCard = ({ order }) => {
 
 
     return (
-        <div className="OrderCard">
+      <div className="OrderCard">
         <a className="OrderDetailsLink" onClick={()=>{setOrderDetails(!orderDetails)}}>
-          <h3>{order.attributes.order_Date}</h3>
+          <h2>
+            {order.attributes.order_Date} - 
+            ${order.attributes.total_price}
+          </h2>
+
         </a>
       {orderDetails && extraContent}
       </div>
