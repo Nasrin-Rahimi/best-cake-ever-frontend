@@ -126,7 +126,7 @@ a.active {
   display: inline-block;
 }
 
-.home h2 {
+h2, h3 {
   color:rgb(110, 55, 16);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
 }
